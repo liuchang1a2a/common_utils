@@ -1,0 +1,229 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>springmvc_tmp</groupId>
+  <artifactId>spring_tmp</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <name>Spring MVC template</name>
+  <url>http://maven.apache.org</url>
+  
+  <dependencies>
+  	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-core</artifactId>
+	    <version>5.2.4.RELEASE</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-aop</artifactId>
+	    <version>5.2.4.RELEASE</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-context</artifactId>
+	    <version>5.2.4.RELEASE</version>
+	</dependency>  	
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-web</artifactId>
+	    <version>5.2.4.RELEASE</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-webmvc</artifactId>
+	    <version>5.2.4.RELEASE</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-oxm</artifactId>
+	    <version>5.2.4.RELEASE</version>
+	</dependency>	
+	<!-- 
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-jdbc</artifactId>
+	    <version>5.2.4.RELEASE</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-test</artifactId>
+	    <version>5.2.4.RELEASE</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-jms</artifactId>
+	    <version>5.2.4.RELEASE</version>
+	</dependency>
+	-->
+	<dependency>
+		 <groupId>commons-logging</groupId>
+		 <artifactId>commons-logging</artifactId>
+		 <version>1.2</version>		   
+	</dependency>
+	<dependency>
+	    <groupId>junit</groupId>
+	    <artifactId>junit</artifactId>
+	    <version>4.12</version>
+	</dependency>	
+	<dependency>
+	    <groupId>com.alibaba</groupId>
+	    <artifactId>fastjson</artifactId>
+	    <version>1.2.61</version>
+	</dependency>
+	<!-- 文件上传 -->
+	<dependency>
+	    <groupId>commons-io</groupId>
+	    <artifactId>commons-io</artifactId>
+	    <version>2.6</version> <!-- 2.4 -->
+    </dependency>	
+    <dependency>
+	    <groupId>commons-fileupload</groupId>
+	    <artifactId>commons-fileupload</artifactId>
+	    <version>1.4</version>	<!-- 1.3.1 -->
+	</dependency>
+	<!-- 根据ContentType获取EXT -->
+    <dependency>
+	    <groupId>org.apache.tika</groupId>
+	    <artifactId>tika-core</artifactId>
+	    <version>1.22</version>
+	</dependency> 
+	<!-- 二维码  -->   		
+	<dependency>
+	    <groupId>com.google.zxing</groupId>
+	    <artifactId>core</artifactId>
+	    <version>3.3.0</version>
+	</dependency>
+	<dependency>
+	    <groupId>com.google.zxing</groupId>
+	    <artifactId>javase</artifactId>
+	    <version>3.3.0</version>
+	</dependency>
+	<!-- HTTP请求 -->
+	<dependency>
+	    <groupId>org.apache.httpcomponents</groupId>
+	    <artifactId>httpclient</artifactId>
+	    <version>4.5.8</version>
+	</dependency>	
+	<dependency>
+	    <groupId>org.apache.httpcomponents</groupId>
+	    <artifactId>httpmime</artifactId>
+	    <version>4.5.8</version>
+	</dependency>
+	<!-- 解析HTML -->
+	<dependency>
+	    <groupId>org.jsoup</groupId>
+	    <artifactId>jsoup</artifactId>
+	    <version>1.9.2</version>
+	</dependency>	
+	<!-- 转义/反转义 HTML,JAVA -->
+	<dependency>
+	    <groupId>org.apache.commons</groupId>
+	    <artifactId>commons-lang3</artifactId>
+	    <version>3.5</version>
+	</dependency>
+	
+	<!-- 视频操作 -->
+	<dependency>
+        <groupId>org.bytedeco</groupId>
+        <artifactId>javacv</artifactId>
+        <version>1.4.2</version>
+        <exclusions>
+            <exclusion>
+                <groupId>org.bytedeco.javacpp-presets</groupId>
+                <artifactId>*</artifactId>
+            </exclusion>
+        </exclusions>
+    </dependency>
+	<dependency>
+        <groupId>org.bytedeco.javacpp-presets</groupId>
+        <artifactId>opencv</artifactId>
+        <version>3.4.2-1.4.2</version>
+    </dependency>
+	<dependency>
+        <groupId>org.bytedeco.javacpp-presets</groupId>
+        <artifactId>opencv</artifactId>
+        <version>3.4.2-1.4.2</version>
+        <classifier>windows-x86_64</classifier>
+    </dependency>
+	<dependency>
+        <groupId>org.bytedeco.javacpp-presets</groupId>
+        <artifactId>ffmpeg</artifactId>
+        <version>4.0.1-1.4.2</version>
+    </dependency>
+	<dependency>
+        <groupId>org.bytedeco.javacpp-presets</groupId>
+        <artifactId>ffmpeg</artifactId>
+        <version>4.0.1-1.4.2</version>
+        <classifier>windows-x86_64</classifier>
+    </dependency>	
+	
+	<!-- thumbnail 图片处理 -->
+	<dependency>
+	    <groupId>net.coobird</groupId>
+	    <artifactId>thumbnailator</artifactId>
+	    <version>0.4.8</version>
+	</dependency>
+	
+	<!-- 读取图片exif信息 -->
+	<dependency>
+	    <groupId>com.drewnoakes</groupId>
+	    <artifactId>metadata-extractor</artifactId>
+	    <version>2.14.0</version>
+	</dependency>
+	
+	<!-- 压缩视频  -->
+	<dependency>
+	    <groupId>ws.schild</groupId>
+	    <artifactId>jave-core</artifactId>
+	    <version>2.7.3</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>ws.schild</groupId>
+	    <artifactId>jave-nativebin-win64</artifactId>
+	    <version>2.7.3</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>org.slf4j</groupId>
+	    <artifactId>slf4j-nop</artifactId>
+	    <version>1.7.6</version>
+	</dependency>
+	
+	<!-- aliyun 人机验证 -->
+	<dependency>
+	    <groupId>com.aliyun</groupId>
+	    <artifactId>aliyun-java-sdk-afs</artifactId>
+	    <version>1.0.0</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>com.aliyun</groupId>
+	    <artifactId>aliyun-java-sdk-core</artifactId>
+	    <version>3.0.6</version>
+	</dependency>
+	
+	<!-- 获取访问浏览器/系统信息 -->
+	<dependency>
+	    <groupId>nl.bitwalker</groupId>
+	    <artifactId>UserAgentUtils</artifactId>
+	    <version>1.2.4</version>
+	</dependency>
+	
+	<!-- gif验证码 -->
+	<dependency>
+      <groupId>com.github.whvcse</groupId>
+      <artifactId>easy-captcha</artifactId>
+      <version>1.6.2</version>
+    </dependency>
+    
+    <!-- 获取音频信息  -->
+    <dependency>
+       <groupId>org</groupId>
+       <artifactId>jaudiotagger</artifactId>
+       <version>2.0.3</version>
+    </dependency>
+  </dependencies>
+  
+</project>
